@@ -1,0 +1,337 @@
+/* Full Stylesheet */
+
+
+/* Body Classes */
+body{
+    display:grid;
+    position:relative;
+    min-height:100vh;
+    padding:0;
+    margin:0;
+    grid-template-rows: auto 1fr auto;
+}
+.cream {
+    background-color: #FBEDC8;
+}
+.saffron{
+    background-color: #FFBD52;
+}
+
+/* done with help from https://codepen.io/ongtiffany/pen/rOwryp */
+.scallop{
+    position:relative;
+    background:#FFBD52;
+    text-align: center;
+}
+.scallop::after { 
+    position:absolute;
+    bottom: -39px;
+    left: 0px;
+    width: 100%;
+    height:39px;
+    content:"";
+    background-image: url('images/scallop.svg');
+    background-size: auto 100%;
+    background-repeat: repeat-x;
+    background-position: bottom;
+    pointer-events: none;
+}
+
+/* Text classes */
+h1{
+    font-family:"Darumadrop One", Arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align:center;
+    position:relative;
+}
+
+.pH{
+    /* Primary Header */
+    color: #E4281D;
+}
+.sH{
+    /* Secondary Header */
+    color: #1B623A;
+}
+
+p{
+    font-family: "Dongle", sans-serif;
+    font-weight: 400;
+    line-height:1.25;
+    color:#75403C;
+}
+
+footer p {
+    text-align: center;
+    line-height: 75%;
+    margin-top: 42px;
+}
+
+.darumadrop-one-regular {
+    font-family: "Darumadrop One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}  
+
+.dongle-light {
+    font-family: "Dongle", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.dongle-regular {
+    font-family: "Dongle", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.dongle-bold {
+    font-family: "Dongle", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.regular-page{
+    margin:20%;
+}
+
+.container{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px auto auto;
+    gap:10px;
+    margin: 120px 20% 5%;
+}
+
+.container-header{
+    margin:0;
+    color:#402824;
+    text-align:left;
+    font-kerning: none;
+}
+.container-para{
+    margin:2% 6%;
+    word-wrap: break-word;
+    text-align:left;
+}
+.signature{
+    margin:0;
+    color:#E4281D;
+    text-align: center;
+}
+
+.all-tomatoes{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap:15px;
+    margin:10%;
+}
+
+
+hr {
+    border: none;
+    border-bottom: 9px dotted #75403C;
+    color: #FBEDC8;
+    height: 25px;
+    width: 65%;
+}
+
+
+/* Navigation Bar */
+.navBar{
+    position:sticky;
+    top:0;
+    z-index:5;
+    overflow: hidden;
+    height:78px;
+}
+.tab{
+    float:right;
+    color:#E4281D;
+    text-align:center;
+    padding-top:13px;
+    text-decoration:none;
+    transition: 0.3s;
+}
+.tab.active{
+    border-bottom:4px solid #1B623A;
+    color:#1B623A;
+}
+.tab:hover{
+    color:#FFBD52;
+}
+#homeButton{
+    float:left;
+    text-decoration: none;
+    cursor:pointer;
+    padding-top:18px;
+    padding-left:35px;
+    padding-bottom: 13px;
+}
+
+/* Mobile screen */
+@media screen and (min-width:375px){
+    h1{
+        line-height:170%;
+    }
+    .pH{
+        font-size:84px;
+    }
+    .sH{
+        font-size: 46px;
+    }
+    .scallop{
+        padding-top:75px;
+        padding-bottom:80px;
+    }
+    p{
+        font-size:24px;
+    }
+    .navBar{ 
+        padding-right:25px;
+    }
+    .tab{
+        display:block;
+        font-size:32px;
+        padding-right:5px;
+        padding-left:5px;
+    }
+    .container-header{
+        font-size:32px;
+        grid-row:1/2;
+        grid-column: 1/4;
+    }
+    .signature{
+        font-size:24px;
+        grid-row:3/4;
+        grid-column: 1/4;
+    }
+    .container-para{
+        grid-row:2/3;
+        grid-column: 1/4;
+    }
+    .container-image{
+        margin-left:auto;
+        margin-right:auto;
+        width:75%;
+        height:75%;
+        grid-row:4/5;
+        grid-column: 1/4;
+    }
+}
+
+/* Tablet screen */
+@media screen and (min-width:600px){
+    h1{
+        line-height:200%;
+    }
+    .pH{
+        /* Primary Header */
+        font-size: 126px;
+    }
+    .sH{
+        /* Secondary Header */
+        font-size: 70px;
+    }
+    .scallop{
+        padding-top:85px;
+        padding-bottom:136px;
+    }
+    p{
+        font-size:32px;
+    }
+    .navBar{ 
+        padding-right:20px;
+    }
+    .tab {
+        display:block;
+        font-size:42px;
+        padding-right:16px;
+        padding-left:16px;
+    }
+    .container-header{
+        grid-column: 1/3;
+        font-size:40px;
+    }
+    .signature{
+        grid-row:3/4;
+        grid-column:1/3;
+        font-size:32px;
+    }
+    .container-image{
+        grid-row:1/4;
+        grid-column:3/4;
+    }
+    .container-para{
+        grid-row:2/3;
+        grid-column:1/3;
+    }
+    
+}
+
+/* Desktop screen */
+@media screen and (min-width:1024px){
+    h1{
+        line-height:220%;
+    }
+    .pH{
+        /* Primary Header */
+        font-size: 145px;
+    }
+    .sH{
+        /* Secondary Header */
+        font-size: 81px;
+    }
+    .scallop{
+        padding-top:100px;
+        padding-bottom:136px;
+    }
+    p{
+        font-size:40px;
+    }
+    .navBar{ 
+        padding-right:41px;
+    }
+    .tab {
+        display:block;
+        font-size:42px;
+        padding-right: 20px;
+        padding-left:20px;
+    }
+    .container-header{
+        grid-column: 1/3;
+        font-size:48px;
+    }
+    .signature{
+        grid-row:3/4;
+        grid-column:1/3;
+        font-size:40px;
+    }
+    .container-image{
+        grid-row:1/4;
+        grid-column:3/4;
+    }
+    .container-para{
+        grid-row:2/3;
+        grid-column:1/3;
+    }
+}
+
+
+/* done with help from https://medium.com/@erikritter/css-snippets-add-a-texture-overlay-to-an-entire-webpage-b0bfdfd02c45#:~:text=TL%3BDR%3A%20To%20cover%20an,and%20pointer%2Devents%3A%20none%20. */
+.texture{
+    z-index:3;
+    display:block;
+    position:absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image:url("images/texture.png");
+    background-repeat: repeat;
+    mix-blend-mode: multiply;
+    opacity:.17;
+    background-position:top left;
+    pointer-events: none;
+}
